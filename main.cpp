@@ -1,11 +1,12 @@
-#include <cstdlib>
-#include <cstdio>
+#include <iostream>
+#include <curl/curl.h>
 
+using namespace std;
 
 
 
 int main (int argc, char** argv) {
 
-    printf ("hello world!");
+    cout << "hello world!" << endl;
     return 0;
 }
