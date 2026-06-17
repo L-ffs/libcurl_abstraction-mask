@@ -1,0 +1,34 @@
+PASSO 1: TREINAMENTO COM JSONPLACEHOLDER (Sem Autenticação)
+
+O JSONPlaceholder é um servidor "mock" (simulado). Ele não exige tokens, então você foca apenas em estruturar suas requisições HTTP e tratar o JSON recebido.
+
+Documentação: https://jsonplaceholder.typicode.com/
+
+O seu roteiro de treinamento:
+
+    Leitura (GET): Faça uma requisição para /posts/1. O objetivo é receber o JSON, realizar o parse (converter a string JSON em variáveis no seu código C) e exibir o título do post no terminal.
+
+    Filtro (Parâmetros): Use a query string /comments?postId=1. Aprenda a montar a URL dinâmica concatenando parâmetros.
+
+    Criação (POST): Envie um JSON via POST para /posts. Aqui você aprenderá a configurar o Content-Type: application/json no seu header e enviar o corpo (body) da requisição.
+
+    Atualização (PUT): Tente alterar o post /posts/1. É o passo fundamental para entender como o servidor recebe e processa dados.
+
+
+
+    PASSO 2: TREINAMENTO COM SPOTIFY WEB API (Com Autenticação)
+
+Agora que você domina o HTTP básico, o Spotify vai te ensinar como provar ao servidor que você tem permissão para acessar os dados.
+
+Documentação: https://developer.spotify.com/documentation/web-api
+
+O seu roteiro de treinamento:
+
+    Dashboard do Desenvolvedor: Vá ao Spotify for Developers, crie um app e pegue seu Client ID e Client Secret.
+
+    O Fluxo de Tokens: Estude o Client Credentials Flow. É um fluxo onde você faz um POST com seu ID e Secret, e o Spotify te devolve um access_token.
+
+    Autorização nos Headers: A partir daí, cada requisição que você fizer (ex: GET /v1/tracks/id) deve incluir o header:
+    Authorization: Bearer SEU_TOKEN_AQUI
+
+    Gerenciamento: Se o token expirar, como o seu programa C trata o erro 401 Unauthorized e solicita um novo?
